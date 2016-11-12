@@ -32,7 +32,11 @@
 #ifndef __ASYNC_QUEUE_H_INCLUDED__
 #define __ASYNC_QUEUE_H_INCLUDED__
 
+#ifdef _WIN32
+#include <bsdqueue.h>
+#else
 #include <sys/queue.h>
+#endif
 #include <sys/types.h>
 #include <sys/time.h>
 #include <stdio.h>
